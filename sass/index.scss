@@ -3,7 +3,7 @@
 
 // imports do sass
 @import './abstracts/reset';
-
+@import './abstracts/placeholder';
 
 :root {
     --title: #fffcf9;
@@ -22,8 +22,19 @@ body {
     background-repeat: no-repeat;
 }
 
-h1 {
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+
+.container {
+    @extend %width_height;
+
+    padding: 10px;
+
+
+    header {
+        @extend %width_height;
+
+        .logo {
+            background-image: url(../assets/favico/android-chrome-512x512.png);
+            background-repeat: no-repeat;
+        }
+    }
 }
