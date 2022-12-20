@@ -1,0 +1,12 @@
+{
+  "name": "rocketflix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "sass -w ./sass/index.scss:./style.css & live-server --no-browser"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
