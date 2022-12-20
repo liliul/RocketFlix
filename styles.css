@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+:root {
+    --title: #fffcf9;
+    --subtitle: #b3b3b3;
+    --bg-button: #e9e6e3;
+    --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+
+    font-size: 64.2%;
+}
+
+h1 {
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
