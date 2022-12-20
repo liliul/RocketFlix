@@ -21,7 +21,9 @@ body {
     background: var(--background);
     background-repeat: no-repeat;
 }
-
+img {
+    max-width: 100%;
+}
 
 .container {
     @extend %width_height;
@@ -29,12 +31,15 @@ body {
     padding: 10px;
 
 
-    header {
+    .header {
+
+
         @extend %width_height;
 
         .logo {
-            background-image: url(../assets/favico/android-chrome-512x512.png);
-            background-repeat: no-repeat;
+            width: 120px;
+            height: 100px;
+
         }
     }
 }

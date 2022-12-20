@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.container header, .container {
+.container .header, .container {
   width: 100%;
   height: auto;
 }
@@ -26,12 +26,16 @@ body {
   background-repeat: no-repeat;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   padding: 10px;
 }
-.container header .logo {
-  background-image: url(../assets/favico/android-chrome-512x512.png);
-  background-repeat: no-repeat;
+.container .header .logo {
+  width: 120px;
+  height: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
