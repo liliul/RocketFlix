@@ -28,11 +28,6 @@ body {
   background-repeat: no-repeat;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-}
-
 .container {
   padding: 10px;
   display: grid;
@@ -48,6 +43,10 @@ img {
 .container .header .logo {
   width: 87px;
   height: 62px;
+}
+.container .header .logo img {
+  width: 100%;
+  height: 100%;
 }
 .container .header .text1 {
   font-family: var(--font-family);
@@ -85,6 +84,32 @@ img {
   font-weight: 400;
   color: var(--subtitle);
   text-align: center;
+}
+@media screen and (min-width: 850px) {
+  .container .content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 628px;
+    height: auto;
+    margin: 4rem auto 0rem auto;
+    padding: 1rem;
+  }
+  .container .content .capa {
+    width: 171px;
+    height: 243px;
+  }
+  .container .content .infos {
+    padding: 0rem 0rem;
+    margin-left: 3.4rem;
+  }
+  .container .content .infos .text2 {
+    margin: 0 0 1.9rem 0;
+    text-align: left;
+  }
+  .container .content .infos .text3 {
+    text-align: left;
+  }
 }
 .container .footer {
   display: flex;

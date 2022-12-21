@@ -25,10 +25,10 @@ body {
     background: var(--background);
     background-repeat: no-repeat;
 }
-img {
-    width: 100%;
-    height: 100%;
-}
+// img {
+//     width: 100%;
+//     height: 100%;
+// }
 
 .container {
     @extend %width_height;
@@ -50,6 +50,11 @@ img {
         .logo {
             width: 87px;
             height: 62px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .text1 {
@@ -87,6 +92,40 @@ img {
             .text3 {
                 @include text(1.6rem, 400, $c-subtitle);
 
+            }
+        }
+    }
+    // media query
+    @include min_width {
+        .content {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: row;
+
+            width: 628px;
+            height: auto;
+
+            margin: 4rem auto 0rem auto;
+            padding: 1rem;
+
+            .capa {
+                // margin-right: 0rem;
+                
+                width: 171px;
+                height: 243px;
+
+            }
+            .infos {
+                padding: 0rem 0rem;
+                margin-left: 3.4rem;
+
+                .text2 {
+                    margin: 0 0 1.9rem 0;
+                    text-align: left;
+                }
+                .text3 {
+                    text-align: left;
+                }
             }
         }
     }

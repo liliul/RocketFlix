@@ -15,3 +15,14 @@ $c-subtitle: var(--subtitle);
     color:$color;
     text-align: center;
 }
+
+
+
+// medias query
+@mixin min_width($md: 850px) {
+    @media screen {
+        @media (min-width: $md) {
+            @content
+        }
+    }
+} 
