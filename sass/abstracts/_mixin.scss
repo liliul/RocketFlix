@@ -4,3 +4,14 @@
     align-items: center;
     flex-direction: $flex;
 }
+
+
+$c-title: var(--title);
+$c-subtitle: var(--subtitle);
+@mixin text($size,$f-weight,$color) {
+    font-family: var(--font-family);
+    font-size: $size;
+    font-weight: $f-weight;
+    color:$color;
+    text-align: center;
+}
