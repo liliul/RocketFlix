@@ -25,10 +25,7 @@ body {
     background: var(--background);
     background-repeat: no-repeat;
 }
-// img {
-//     width: 100%;
-//     height: 100%;
-// }
+
 
 .container {
     @extend %width_height;
@@ -37,7 +34,9 @@ body {
 
     display: grid;
     grid-template-columns: 1fr;
-    // grid-gap: 10px 0px;
+    
+    max-width: 1440px;
+    margin: 0 auto;
 
 
     .header {
