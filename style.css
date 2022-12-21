@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.container .content .infos, .container .content, .container .header, .container {
+.container .footer, .container .content .infos, .container .content, .container .header, .container {
   width: 100%;
   height: auto;
 }
@@ -16,6 +16,7 @@
   --subtitle: #b3b3b3;
   --bg-button: #e9e6e3;
   --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+  --border-text: #1A1A1A;
   --font-family: "Poppins", sans-serif;
   font-size: 64.2%;
 }
@@ -84,6 +85,37 @@ img {
   font-weight: 400;
   color: var(--subtitle);
   text-align: center;
+}
+.container .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0rem 10rem 0rem;
+}
+.container .footer .but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px 10px;
+  width: 180px;
+  height: 47px;
+  border: 1px solid var(--border-text);
+  color: var(--border-text);
+  font-weight: 700;
+  background-color: var(--bg-button);
+}
+.container .footer .but .img-button {
+  width: 35px;
+  height: 25px;
+}
+.container .footer .text4 {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--title);
+  text-align: center;
+  margin-top: 2.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
