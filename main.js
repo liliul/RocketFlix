@@ -25,30 +25,42 @@ function addAppend(id, element) {
 async function lendoApi() {
 
   const response = await fetch(`${url}${API_KEY}&${language}`);
+  console.log(response)
   const data = await response.json();
 
   console.log(data)
-  let filme = data.original_title
-  let overview = data.overview
-  const desc = document.querySelector('#desc')
-  console.log(overview)
+
   const infos = document.querySelector('#infos')
+  
+
+  let filme = data.original_title
   let title = createTags('h1')
   title.setAttribute('class', 'text2')
   title.innerText = filme
   addAppend(infos, title)
 
-  let span = createTags('p')
-  span.setAttribute('class', 'text3')
-  span.innerText = overview
-  addAppend(infos, span)
 
+  let desc = data.overview
+  console.log('desc: ',desc)
+  let descP = createTags('p')
+  descP.setAttribute('class', 'text3')
+  descP.innerText = desc
+  addAppend(infos, descP)
+  
+  if (desc === undefined) {
+    infos.innerHTML = `<p class="text2">Ops, hoje não é dia de assistir filme.
+    Bora codar! 🚀</p>`
+  }
 
   const capa = document.querySelector('#capa')
   let img = data.poster_path
   let poster = createTags('img')
   poster.src = `${IMG_URL}${img}`
   addAppend(capa, poster) 
+  console.log('img: ',img)
+  if (img === undefined) {
+    capa.innerHTML = '<img src="./assets/notFound.jpg">'
+  }
 }
 lendoApi()
 

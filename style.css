@@ -104,6 +104,8 @@ body {
   .container .content .capa img {
     width: 171px;
     height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
   }
   .container .content .infos {
     padding: 0rem 0rem;
