@@ -4,12 +4,16 @@ import {
   language,
 } from './api.js'
 
+function handleMovei() {
+  let numMovies = 1000
+  
+  return Math.floor(Math.random() * numMovies)
 
-const url = `${BASE_URL}19?api_key=`
-const params = {
-  API_KEY,
-  language,
 }
+let numMovies = handleMovei()
+console.log(numMovies)
+
+const url = `${BASE_URL}${numMovies}?api_key=`
 
 function createTags(tag) {
   return document.createElement(tag)
@@ -20,7 +24,7 @@ function addAppend(id, element) {
 
 async function lendoApi() {
 
-  const response = await fetch(`${url}${API_KEY}`);
+  const response = await fetch(`${url}${API_KEY}&language=${language}`);
   const data = await response.json();
 
   console.log(data)
@@ -39,5 +43,12 @@ async function lendoApi() {
   span.innerText = overview
   addAppend(infos, span)
 
+
+  const capa = document.querySelector('#capa')
+  let img = data.poster_path
+  let poster = createTags('img')
+  poster.src = `${IMG_URL}${img}`
+  addAppend(capa, poster) 
 }
 lendoApi()
+

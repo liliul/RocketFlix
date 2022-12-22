@@ -76,6 +76,11 @@ body {
         .capa {
             width: 171px;
             height: 243px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .infos {
@@ -110,8 +115,12 @@ body {
             .capa {
                 // margin-right: 0rem;
                 
-                width: 171px;
-                height: 243px;
+               
+
+                img {
+                    width: 171px;
+                    height: 100%;
+                }
 
             }
             .infos {
