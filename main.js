@@ -24,7 +24,7 @@ function addAppend(id, element) {
 
 async function lendoApi() {
 
-  const response = await fetch(`${url}${API_KEY}&language=${language}`);
+  const response = await fetch(`${url}${API_KEY}&${language}`);
   const data = await response.json();
 
   console.log(data)
