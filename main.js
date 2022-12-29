@@ -4,12 +4,15 @@ import {
   language,
 } from './api.js'
 
+
+
 function handleMovei() {
-  let numMovies = 1000
+  let numMovies = 1500
   
   return Math.floor(Math.random() * numMovies)
 
 }
+
 let numMovies = handleMovei()
 console.log(numMovies)
 
