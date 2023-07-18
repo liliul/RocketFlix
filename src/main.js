@@ -69,7 +69,7 @@ async function lendoApi() {
 
   // se a img for undefined
   if (img === undefined) {
-    capa.innerHTML = '<img src="./assets/notFound.jpg">'
+    capa.innerHTML = '<img src="./src/assets/notFound.jpg">'
   }
 
   //pegar data
