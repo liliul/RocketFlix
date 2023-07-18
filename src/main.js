@@ -14,7 +14,7 @@ function handleMovei() {
 }
 
 let numMovies = handleMovei()
-console.log(numMovies)
+// console.log(numMovies)
 
 const url = `${BASE_URL}${numMovies}?api_key=`
 
@@ -31,10 +31,10 @@ function addAppend(id, element) {
 async function lendoApi() {
 
   const response = await fetch(`${url}${API_KEY}&${language}`);
-  console.log(response)
+  // console.log(response)
   const data = await response.json();
 
-  console.log(data)
+  // console.log(data)
 
   const infos = document.querySelector('#infos')
   
@@ -47,7 +47,7 @@ async function lendoApi() {
 
   // pegando descrição
   let desc = data.overview
-  console.log('desc: ',desc)
+  // console.log('desc: ',desc)
   let descP = createTags('p')
   descP.setAttribute('class', 'text3')
   descP.innerText = desc
@@ -65,7 +65,7 @@ async function lendoApi() {
   let poster = createTags('img')
   poster.src = `${IMG_URL}${img}`
   addAppend(capa, poster) 
-  console.log('img: ',img)
+  // console.log('img: ',img)
 
   // se a img for undefined
   if (img === undefined) {
