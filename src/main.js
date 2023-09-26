@@ -4,7 +4,8 @@ import {
   language,
 } from './api.js'
 
-
+import { fetchApi } from './services/fetchApi.js';
+import { createTags, addAppend } from './services/utils.js';
 
 function handleMovei() {
   let numMovies = 1500
@@ -18,23 +19,16 @@ let numMovies = handleMovei()
 
 const url = `${BASE_URL}${numMovies}?api_key=`
 
-// criar tags
-function createTags(tag) {
-  return document.createElement(tag)
-}
-// add no html
-function addAppend(id, element) {
-  return id.appendChild(element)
-}
+
 
 // lendo api
 async function lendoApi() {
 
-  const response = await fetch(`${url}${API_KEY}&${language}`);
+  // const response = await fetch(`${url}${API_KEY}&${language}`);
   // console.log(response)
-  const data = await response.json();
-
-  // console.log(data)
+  // const data = await response.json();
+  const data = await fetchApi(`${url}${API_KEY}&${language}`);
+  console.log(data)
 
   const infos = document.querySelector('#infos')
   
