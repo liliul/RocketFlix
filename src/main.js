@@ -6,7 +6,7 @@ import {
 
 import { fetchApi } from './services/fetchApi.js';
 import { createTags, addAppend, handleMovei } from './services/utils.js';
-
+import { Err } from './component/errorHtml.js';
 
 
 let numMovies = handleMovei()
@@ -43,9 +43,12 @@ async function lendoApi() {
   addAppend(infos, descP)
   
   // se a descrição for undefined 
-  if (desc === undefined) {
-    infos.innerHTML = `<p class="text2">Ops, hoje não é dia de assistir filme.
-    Bora codar! 🚀</p>`
+  // if (desc === undefined) {
+  //   infos.innerHTML = `<p class="text2">Ops, hoje não é dia de assistir filme.
+  //   Bora codar! 🚀</p>`
+  // }
+   if (desc === undefined) {
+    infos.innerHTML = Err.ErrorSemMovie
   }
 
   // pagando a img
@@ -57,8 +60,11 @@ async function lendoApi() {
   // console.log('img: ',img)
 
   // se a img for undefined
+  // if (img === undefined) {
+  //   capa.innerHTML = '<img src="./src/assets/notFound.jpg">'
+  // }
   if (img === undefined) {
-    capa.innerHTML = '<img src="./src/assets/notFound.jpg">'
+    capa.innerHTML = Err.ErrorSemCapa
   }
 
   //pegar data
@@ -67,8 +73,11 @@ async function lendoApi() {
   span.setAttribute('class', 'text2')
   span.innerText = d
   addAppend(infos, span)
+  //  if(d === undefined) {
+  //   span.innerHTML = ''
+  // }
   if(d === undefined) {
-    span.innerHTML = ''
+    span.innerHTML = Err.ErrorSemData
   }
 }
 lendoApi()
