@@ -12,6 +12,7 @@ export function handleMovei() {
   
   return Math.floor(Math.random() * numMovies)
 }
+// limpa html
 export function limparFilme() {
   infos.innerHTML = ''
   capa.innerHTML  = ''
