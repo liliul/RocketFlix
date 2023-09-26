@@ -6,22 +6,28 @@ import {
 } from './api.js'
 
 import { fetchApi } from './services/fetchApi.js';
-import { createTags, addAppend, handleMovei } from './services/utils.js';
+import { createTags, addAppend, handleMovei, limparFilme } from './services/utils.js';
 import { Err } from './component/errorHtml.js';
 
 const infos = document.querySelector('#infos');
 const capa = document.querySelector('#capa');
+const buttonReload = document.querySelector('#buttonReload');
 
 
 
-let numMovies = handleMovei()
-// console.log(numMovies)
+buttonReload.addEventListener('click',lendoApi)
+
 
 
 
 
 // lendo api
 async function lendoApi() {
+  limparFilme()
+  
+  let numMovies = handleMovei()
+  console.log(numMovies)
+
   const url = `${BASE_URL}${numMovies}?api_key=`;
 
   // const response = await fetch(`${url}${API_KEY}&${language}`);
@@ -86,4 +92,3 @@ async function lendoApi() {
     span.innerHTML = Err.ErrorSemData
   }
 }
-lendoApi()
