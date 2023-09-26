@@ -14,12 +14,7 @@ const capa = document.querySelector('#capa');
 const buttonReload = document.querySelector('#buttonReload');
 
 
-
 buttonReload.addEventListener('click',lendoApi)
-
-
-
-
 
 // lendo api
 async function lendoApi() {
@@ -40,10 +35,10 @@ async function lendoApi() {
   // const infos = document.querySelector('#infos')
   
   // pegando title
-  let filme = data.title
+  let tituloFilme = data.title
   let title = createTags('h1')
   title.setAttribute('class', 'text2')
-  title.innerText = filme
+  title.innerText = tituloFilme
   addAppend(infos, title)
 
   // pegando descrição
@@ -65,9 +60,9 @@ async function lendoApi() {
 
   // pagando a img
   // const capa = document.querySelector('#capa')
-  let img = data.poster_path
+  let imgCapa = data.poster_path
   let poster = createTags('img')
-  poster.src = `${IMG_URL}${img}`
+  poster.src = `${IMG_URL}${imgCapa}`
   addAppend(capa, poster) 
   // console.log('img: ',img)
 
@@ -75,20 +70,20 @@ async function lendoApi() {
   // if (img === undefined) {
   //   capa.innerHTML = '<img src="./src/assets/notFound.jpg">'
   // }
-  if (img === undefined) {
+  if (imgCapa === undefined) {
     capa.innerHTML = Err.ErrorSemCapa
   }
 
   //pegar data
-  let d = data.release_date
+  let dataFilme = data.release_date
   let span = createTags('span')
   span.setAttribute('class', 'text2')
-  span.innerText = d
+  span.innerText = dataFilme
   addAppend(infos, span)
   //  if(d === undefined) {
   //   span.innerHTML = ''
   // }
-  if(d === undefined) {
+  if(dataFilme === undefined) {
     span.innerHTML = Err.ErrorSemData
   }
 }
