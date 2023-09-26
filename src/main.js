@@ -1,5 +1,6 @@
 import {
-  API_KEY, BASE_URL,
+  API_KEY,
+  BASE_URL,
   IMG_URL,
   language,
 } from './api.js'
@@ -8,24 +9,29 @@ import { fetchApi } from './services/fetchApi.js';
 import { createTags, addAppend, handleMovei } from './services/utils.js';
 import { Err } from './component/errorHtml.js';
 
+const infos = document.querySelector('#infos');
+const capa = document.querySelector('#capa');
+
+
 
 let numMovies = handleMovei()
 // console.log(numMovies)
 
-const url = `${BASE_URL}${numMovies}?api_key=`
 
 
 
 // lendo api
 async function lendoApi() {
+  const url = `${BASE_URL}${numMovies}?api_key=`;
 
   // const response = await fetch(`${url}${API_KEY}&${language}`);
   // console.log(response)
   // const data = await response.json();
   const data = await fetchApi(`${url}${API_KEY}&${language}`);
+ 
   console.log(data)
 
-  const infos = document.querySelector('#infos')
+  // const infos = document.querySelector('#infos')
   
   // pegando title
   let filme = data.title
@@ -52,7 +58,7 @@ async function lendoApi() {
   }
 
   // pagando a img
-  const capa = document.querySelector('#capa')
+  // const capa = document.querySelector('#capa')
   let img = data.poster_path
   let poster = createTags('img')
   poster.src = `${IMG_URL}${img}`
