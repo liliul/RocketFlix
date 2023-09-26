@@ -6,3 +6,9 @@ export function createTags(tag) {
 export function addAppend(id, element) {
   return id.appendChild(element)
 }
+// gera numeros aleatorios ate 1500
+export function handleMovei() {
+  let numMovies = 1500
+  
+  return Math.floor(Math.random() * numMovies)
+}

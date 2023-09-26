@@ -5,14 +5,9 @@ import {
 } from './api.js'
 
 import { fetchApi } from './services/fetchApi.js';
-import { createTags, addAppend } from './services/utils.js';
+import { createTags, addAppend, handleMovei } from './services/utils.js';
 
-function handleMovei() {
-  let numMovies = 1500
-  
-  return Math.floor(Math.random() * numMovies)
 
-}
 
 let numMovies = handleMovei()
 // console.log(numMovies)
