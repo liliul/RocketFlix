@@ -1,3 +1,8 @@
+import { IMG_URL } from '../api.js';
+import { createTags, addAppend } from '../services/utils.js';
+import { Err } from './errorHtml.js';
+
+
 export default function renderHtml(data) {
   // pegando title
   let tituloFilme = data.title;
