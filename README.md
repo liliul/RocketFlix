@@ -5,6 +5,7 @@ link figma   https://www.figma.com/file/l4BjmiUxe5cJwcJyhhv3ky/DD-%2F-Rocketflix
 
 Tecnologias usadas: html css/sass javascritp.
 
-Iniciar desenhevolvimento ```bash
-	yarn dev
+Iniciar desenhevolvimento:
+```bash
+yarn dev ou npm run dev
 ```
