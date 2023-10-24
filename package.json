@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "sass -w ./src/sass/index.scss:./src/style.css & live-server --no-browser"
+    "dev": "sass -w ./src/sass/index.scss:./src/style/style.css & live-server --no-browser"
   },
   "keywords": [],
   "author": "",
