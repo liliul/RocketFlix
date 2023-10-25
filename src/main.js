@@ -2,7 +2,7 @@ import {
   API_KEY,
   BASE_URL,
   language,
-} from './api.js'
+} from './utils/token.js';
 
 import { fetchApi } from './services/fetchApi.js';
 import { handleMovei, limparFilme } from './services/utils.js';

@@ -1,4 +1,4 @@
-import { IMG_URL } from '../api.js';
+import { IMG_URL } from '../utils/token.js';
 import { createTags, addAppend } from '../services/utils.js';
 import { Err } from './errorHtml.js';
 
